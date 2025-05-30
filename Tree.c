@@ -138,9 +138,7 @@ struct TreeNode* readStudent(FILE* file) {
 
     fread(&node->student->gender, sizeof(bool), 1, file);
     fread(&node->student->age, sizeof(int), 1, file);
-    fread(&node->student->mathMark, sizeof(int), 1, file);
-    fread(&node->student->physicsMark, sizeof(int), 1, file);
-    fread(&node->student->chemistryMark, sizeof(int), 1, file);
+    fread(&node->student->mathMark, sizeof(int), 3, file);
 
     // Указатель на функцию не сохраняется/восстанавливается
     node->student->print = printStudent;
